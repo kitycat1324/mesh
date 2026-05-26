@@ -47,7 +47,7 @@
                 android:textColor="@color/text_secondary"
                 android:textSize="14sp" />
         </LinearLayout>
-
+<!--карточка для логина-->
         <LinearLayout
             android:id="@+id/layoutLoginCard"
             android:layout_width="0dp"
@@ -68,7 +68,7 @@
                 android:textColor="@color/text_primary"
                 android:textSize="18sp"
                 android:textStyle="bold" />
-
+<!--проверка почты-->
             <com.google.android.material.textfield.TextInputLayout
                 style="@style/Widget.Material3.TextInputLayout.OutlinedBox"
                 android:layout_width="match_parent"
@@ -83,7 +83,7 @@
                     android:layout_height="wrap_content"
                     android:inputType="textEmailAddress" />
             </com.google.android.material.textfield.TextInputLayout>
-
+<!--проверка пароля-->
             <com.google.android.material.textfield.TextInputLayout
                 style="@style/Widget.Material3.TextInputLayout.OutlinedBox"
                 android:layout_width="match_parent"
@@ -99,7 +99,7 @@
                     android:layout_height="wrap_content"
                     android:inputType="textPassword" />
             </com.google.android.material.textfield.TextInputLayout>
-
+<!--запомнить меня-->
             <CheckBox
                 android:id="@+id/checkRememberMe"
                 android:layout_width="wrap_content"
@@ -107,7 +107,7 @@
                 android:layout_marginTop="10dp"
                 android:text="Remember Me"
                 android:textColor="@color/text_secondary" />
-
+<!--кнопка для логина-->
             <com.google.android.material.button.MaterialButton
                 android:id="@+id/btnLogin"
                 android:layout_width="match_parent"
@@ -117,7 +117,7 @@
                 android:textAllCaps="false"
                 app:backgroundTint="@color/blue_login"
                 app:cornerRadius="12dp" />
-
+<!--забыл пароль-->
             <TextView
                 android:id="@+id/tvForgotPassword"
                 android:layout_width="wrap_content"
@@ -127,7 +127,7 @@
                 android:text="Forgot Password?"
                 android:textColor="@color/blue_login"
                 android:textStyle="bold" />
-
+<!--создать аккаунт-->
             <TextView
                 android:id="@+id/tvOpenRegister"
                 android:layout_width="wrap_content"
@@ -273,7 +273,7 @@
                 android:text="Already have an account? Sign in"
                 android:textColor="@color/blue_login" />
         </LinearLayout>
-
+<!--отступ от края-->
         <Space
             android:layout_width="1dp"
             android:layout_height="36dp"
