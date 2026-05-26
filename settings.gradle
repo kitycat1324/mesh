@@ -1,0 +1,31 @@
+// Этот файл подключает репозитории и модули проекта Gradle.
+pluginManagement {
+    // repositories говорит Gradle, откуда скачивать плагины для сборки проекта.
+    repositories {
+        // google() нужен для Android Gradle Plugin и Android-библиотек.
+        google()
+        // mavenCentral() нужен для Kotlin и многих обычных Java/Kotlin зависимостей.
+        mavenCentral()
+        // gradlePluginPortal() нужен для поиска Gradle-плагинов.
+        gradlePluginPortal()
+    }
+}
+
+// dependencyResolutionManagement управляет тем, откуда брать обычные зависимости проекта.
+dependencyResolutionManagement {
+    // FAIL_ON_PROJECT_REPOS запрещает задавать репозитории в каждом модуле отдельно.
+    repositoriesMode.set(RepositoriesMode.FAIL_ON_PROJECT_REPOS)
+    // repositories перечисляет хранилища библиотек.
+    repositories {
+        // google() хранит AndroidX, Material Components и другие Android-библиотеки.
+        google()
+        // mavenCentral() хранит Kotlin и множество общих библиотек.
+        mavenCentral()
+    }
+}
+
+// rootProject.name задает имя всего проекта, которое видно в Android Studio.
+rootProject.name = "FNCH2026"
+
+// include(":app") подключает главный модуль приложения с именем app.
+include(":app")

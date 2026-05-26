@@ -1,0 +1,8 @@
+// plugins подключает плагины верхнего уровня проекта.
+plugins {
+    // Этот плагин нужен для Android-приложения, но apply false означает:
+    // пока просто объявить версию, а реально подключить его уже в модуле app.
+    id 'com.android.application' version '8.5.2' apply false
+    // Этот плагин нужен для поддержки Kotlin в Android-проекте.
+    id 'org.jetbrains.kotlin.android' version '1.9.24' apply false
+}

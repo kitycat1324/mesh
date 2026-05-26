@@ -1,0 +1,18 @@
+<?xml version="1.0" encoding="utf-8"?>
+<resources>
+    <color name="blue_login">#1E5BD7</color>
+    <color name="blue_soft">#DCE7FF</color>
+    <color name="screen_background">#F7F6FC</color>
+    <color name="profile_editor_bg">#151517</color>
+    <color name="text_primary">#252938</color>
+    <color name="text_secondary">#6B738A</color>
+    <color name="text_muted">#9AA3BA</color>
+    <color name="button_disabled">#B5BDC9</color>
+    <color name="panel_soft">#EEF1FB</color>
+    <color name="error_red">#D52929</color>
+    <color name="error_soft">#FFE2E2</color>
+    <color name="green_soft">#E7F8EC</color>
+    <color name="green_text">#2C8B4D</color>
+    <color name="white">#FFFFFF</color>
+    <color name="black">#000000</color>
+</resources>

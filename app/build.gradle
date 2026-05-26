@@ -1,0 +1,69 @@
+// plugins подключает плагины именно для модуля приложения app.
+plugins {
+    // com.android.application говорит Gradle, что этот модуль собирается как Android-приложение.
+    id 'com.android.application'
+    // org.jetbrains.kotlin.android включает поддержку Kotlin в Android-модуле.
+    id 'org.jetbrains.kotlin.android'
+}
+
+// android содержит основные настройки Android-приложения.
+android {
+    // namespace задает пространство имен приложения для современных Android-проектов.
+    namespace 'com.example.fnch2026'
+    // compileSdk указывает версию Android SDK, на которой проект компилируется.
+    compileSdk 34
+
+    // defaultConfig хранит базовые настройки приложения.
+    defaultConfig {
+        // applicationId - уникальный идентификатор приложения на устройстве.
+        applicationId "com.example.fnch2026"
+        // minSdk - минимальная версия Android, на которой приложение может запускаться.
+        minSdk 24
+        // targetSdk - версия Android, под которую приложение оптимизируется.
+        targetSdk 34
+        // versionCode - внутренний числовой номер версии приложения.
+        versionCode 1
+        // versionName - версия приложения в человекочитаемом виде.
+        versionName "1.0"
+
+        // testInstrumentationRunner нужен для инструментальных тестов Android.
+        testInstrumentationRunner "androidx.test.runner.AndroidJUnitRunner"
+    }
+
+    // buildTypes описывает варианты сборки, например debug и release.
+    buildTypes {
+        // release - вариант, который обычно идет на публикацию.
+        release {
+            // minifyEnabled false отключает сжатие и запутывание кода, чтобы проект был проще для учебы.
+            minifyEnabled false
+            // proguardFiles подключает стандартные правила ProGuard на случай будущей оптимизации.
+            proguardFiles getDefaultProguardFile('proguard-android-optimize.txt'), 'proguard-rules.pro'
+        }
+    }
+
+    // compileOptions задает настройки Java для компилятора.
+    compileOptions {
+        // sourceCompatibility задает версию Java для исходного кода.
+        sourceCompatibility JavaVersion.VERSION_1_8
+        // targetCompatibility задает версию Java для скомпилированного байткода.
+        targetCompatibility JavaVersion.VERSION_1_8
+    }
+
+    // kotlinOptions задает параметры компилятора Kotlin.
+    kotlinOptions {
+        // jvmTarget говорит Kotlin компилировать код под Java 8.
+        jvmTarget = '1.8'
+    }
+}
+
+// dependencies перечисляет библиотеки, которые использует приложение.
+dependencies {
+    // core-ktx добавляет удобные Kotlin-расширения для Android API.
+    implementation 'androidx.core:core-ktx:1.13.1'
+    // appcompat нужен для совместимости и базового класса AppCompatActivity.
+    implementation 'androidx.appcompat:appcompat:1.7.0'
+    // material подключает Material Design компоненты, например TextInputLayout и MaterialButton.
+    implementation 'com.google.android.material:material:1.12.0'
+    // constraintlayout нужен для гибкой верстки экрана через ограничения.
+    implementation 'androidx.constraintlayout:constraintlayout:2.1.4'
+}
